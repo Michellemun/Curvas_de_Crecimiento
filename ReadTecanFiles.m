@@ -62,15 +62,15 @@ for i=1:length(archivos)
     if fluorescencias
     
         if length(NUM)>80 %quiere decir que el archivo tiene más filas de 80 solo cuando midió los 3 parámetros
-            clear rfp YFP
+            clear rfp CFP
             rfp=(NUM(42-sumar:49-sumar,:));
-            YFP=(NUM(75-sumar:82-sumar,:));
+            CFP=(NUM(75-sumar:82-sumar,:));
         else
             clear rfp YFP
             rfp(1:96,1)=0;
-            YFP(1:96,1)=0;
+            CFP(1:96,1)=0;
         end
-        BgDataAll(plato).YFP=[BgDataAll(plato).YFP; YFP(:)'];
+        BgDataAll(plato).CFP=[BgDataAll(plato).CFP; CFP(:)'];
         BgDataAll(plato).RFP=[BgDataAll(plato).RFP; rfp(:)'];
     end
 
