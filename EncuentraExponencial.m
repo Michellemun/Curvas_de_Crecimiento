@@ -7,7 +7,7 @@ if plots
     plot(t,OD,'o')
     hold on
 end
-  for i=1:length(OD)-3
+  for i=1:size(OD,1)-3
         [m]=robustfit(t(i:i+2), OD(i:i+2));
         pendientes(i)=m(2);
         if plots
